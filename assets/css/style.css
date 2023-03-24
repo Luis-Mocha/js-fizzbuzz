@@ -1,0 +1,32 @@
+main {
+    background-color: rgb(8,59,76);
+}
+
+
+
+
+#box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.box {
+    background-color: rgb(19,137,178);
+    margin: 10px;
+    width: calc(100% / 7 - 20px);
+    aspect-ratio: 1;
+    
+    text-align: center;
+}
+.box-Fizz {
+    background-color: rgb(12,214,161);
+}
+.box-Buzz {
+    background-color: rgb(255,209,102);
+}
+.box-FizzBuzz {
+    background-color: rgb(240,70,111);
+}
