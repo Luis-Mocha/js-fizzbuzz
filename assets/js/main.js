@@ -1,20 +1,39 @@
-let numberElement;
+const boxContainer = document.querySelector('#box-container')
 
-for (let index = 1; index <= 100; index++) {
-    
-    numberElement = index;
+//creo un array con 100 numeri
+let numberList = [];
+for (let i = 1; i <= 100; i++) {
+    numberList.push(i);
+}
+console.log(numberList)
 
-    if (numberElement % 3 == 0 && numberElement % 5 == 0) {
-        numberElement = 'Fizzbuzz';
-    } else if (numberElement % 5 == 0) {
-        numberElement = 'Buzz';
-    } else if (numberElement % 3 == 0) {
-        numberElement = 'Fizz';
+// Creo array con numeri e parole al posto giusto
+for (let i = 0; i <= 100; i++) {
+
+    if (numberList[i] % 3 == 0 && numberList[i] % 5 == 0) {
+
+        numberList[i] = 'FizzBuzz';
+
+    } else if (numberList[i] % 3 == 0) {
+
+        numberList[i] = 'Fizz';
+
+    } else if (numberList[i] % 5 == 0) {
+
+        numberList[i] = 'Buzz';
+    }
+};
+console.log(numberList)
+
+// Creo un elemento html per ogni numero/parola
+let numberBox;
+for (let i = 0; i <= 100; i++) {
+
+    if (numberList[i] == 'FizzBuzz' || numberList[i] == 'Fizz' || numberList[i] == 'Buzz' ) {
+        numberBox = `<div class="box box-${i+1} box-${numberList[i]}">${numberList[i]}</div>`;
+    } else {
+        numberBox = `<div class="box box-${i+1}">${numberList[i]}</div>`;
     }
     
-    console.log(numberElement)
+    boxContainer.innerHTML += numberBox;
 }
-
-
-
-
