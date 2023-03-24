@@ -1,7 +1,7 @@
 // Creo un div dove inserire i miei "box" e lo inserisco nel DOM
 const boxContainer = document.createElement('div');
 boxContainer.id = 'box-container';
-boxContainer.classList.add('container')
+boxContainer.classList.add('container-md')
 const mainDom = document.querySelector("main");
 console.log(mainDom)
 mainDom.appendChild(boxContainer);

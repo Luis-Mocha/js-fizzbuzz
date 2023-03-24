@@ -2,9 +2,6 @@ main {
     background-color: rgb(8,59,76);
 }
 
-
-
-
 #box-container {
     display: flex;
     flex-direction: row;
@@ -15,12 +12,30 @@ main {
 
 .box {
     background-color: rgb(19,137,178);
-    margin: 10px;
-    width: calc(100% / 7 - 20px);
+    margin: 5px;
+    padding: 5px;
+    width: calc(100% / 7 - 10px);
     aspect-ratio: 1;
     
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 10px;
 }
+
+@media screen and (min-width: 576px) {
+    .box {
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .box {
+        font-size: 20px;
+    }
+}
+
+
 .box-Fizz {
     background-color: rgb(12,214,161);
 }
